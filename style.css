@@ -6,11 +6,6 @@
     padding: 0;
 }
 
-/* Styles for the body element can be added here */
-body {
-
-}
-
 /* Smooth scrolling effect for the whole HTML document */
 html {
     scroll-behavior: smooth;
@@ -21,12 +16,14 @@ p {
     color: rgb(85, 85, 85);
 }
 
+
 /*Transition*/
 
 /* Adding a transition effect to all anchor tags and buttons */
 a, .btn {
     transition: all 300ms ease;
 }
+
 
 /*Desktop Nav*/
 
@@ -70,6 +67,7 @@ a:hover{
     cursor: default;
 }
 
+
 /* Hamburger Menu */
 
 /* Hiding the hamburger navigation by default */
@@ -79,8 +77,10 @@ a:hover{
 
 /* Positioning and displaying the hamburger menu */
 .hamburger-menu{
-    position: relative;
+    position: absolute;
+    right: 0;
     display: inline-block;
+    margin-right: 20px;
 }
 
 /* Styling the hamburger icon */
@@ -123,3 +123,44 @@ a:hover{
     text-decoration: none;
     transition: all 0.3s ease-in-out;
 }
+
+/* Styling the list items in the menu */
+.menu-links li {
+    list-style: none;
+}
+
+/* Styling the menu links when open */
+.menu-links.open {
+    max-height: 300px;
+}
+
+/* Styling the first child of the hamburger icon when open */
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+/* Styling the second child of the hamburger icon when open */
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+/* Styling the last child of the hamburger icon when open */
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* Resetting the styles of the first child of the hamburger icon */
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+/* Resetting the styles of the second child of the hamburger icon */
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+/* Resetting the styles of the last child of the hamburger icon */
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
