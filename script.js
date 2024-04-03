@@ -1,3 +1,5 @@
+// Toggles the visibility of
+// the navigation menus
 function toggleMenu() {
     const menu = document.querySelector(".menu-links");
     const icon = document.querySelector(".hamburger-icon");

@@ -9,6 +9,8 @@
     <script src="script.js"></script>
 </head>
 <body>
+
+<!-- Desktop navigation -->
 <nav id="desktop-nav">
     <div>
         <ul class="nav-links">
@@ -19,14 +21,20 @@
     </div>
     <div class="logo">Adam Counihan</div>
 </nav>
+
+<!-- Mobile Navigation Section -->
 <nav id="hamburger-nav">
     <div class="logo">Adam Counihan</div>
     <div class="hamburger-menu">
+
+        <!-- Hamburger Icon to toggle menu -->
         <div class="hamburger-icon" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
+
+        <!-- Menu Links -->
         <div class="menu-links">
             <li><a href="#about" onclick="toggleMenu()">About</a></li>
             <li><a href="#experiences" onclick="toggleMenu()">Experiences</a></li>
@@ -35,24 +43,33 @@
     </div>
 </nav>
 
-<!-- Profile -->
+
+<!-- Profile Section -->
 <section id="profile">
+
+    <!-- Section Title -->
     <h2 class="title">Who am I?</h2>
+
     <div class="profile-info-container">
+        <!-- Profile Image -->
         <div class="profile-img">
-            <img src="./images/tempProfilePicture.jpeg" alt="">
+            <img src="./images/tempProfilePicture.jpeg" alt="Profile Picture">
         </div>
+
+        <!-- Profile Description -->
         <div class="section-text">
             <p class="section-text-header">I'm Adam,</p>
             <p class="section-text-paragraph">a computer science student with a passion for
-                <br>software and web development</p>
+                <br> software and web development</p>
+
+            <!-- Social Media Links (Icons from Icons8.com) -->
             <div id="socials-container">
-                <!-- Icons from Icons8.com -->
-                <a href="https://github.com" target="_blank"><img src="./icons/github.png" alt="Github"></a>
+                <a href="https://github.com" target="_blank"><img src="./icons/github.png" alt="GitHub"></a>
                 <a href="https://linkedin.com" target="_blank"><img src="./icons/linkedin.png" alt="Linkedin"></a>
             </div>
         </div>
     </div>
 </section>
+
 </body>
 </html>
