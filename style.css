@@ -1,5 +1,13 @@
 /*General*/
 
+:root {
+    --text-main-color: #423e3e;
+    --nav-bg-color: #386641;
+    --link-color: white;
+    --link-hover-color: #F3D3BD;
+    --transition-speed: 300ms;
+}
+
 /* Resetting default margins and padding for all elements */
 * {
     margin: 0;
@@ -13,17 +21,15 @@ html {
 
 /* Setting the color for all paragraph text */
 p {
-    color: rgb(85, 85, 85);
+    color: var(--text-main-color);
 }
-
 
 /*Transition*/
 
 /* Adding a transition effect to all anchor tags and buttons */
 a, .btn {
-    transition: all 300ms ease;
+    transition: all var(--transition-speed) ease;
 }
-
 
 /*Desktop Nav*/
 
@@ -34,7 +40,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     height: 17vh;
-    margin-bottom: -4rem;
+    background-color: var(--nav-bg-color);
 }
 
 /* Styling the navigation links */
@@ -47,27 +53,27 @@ nav{
 
 /* Styling the anchor tags */
 a{
-    color: black;
+    color: var(--link-color);
     text-decoration: none;
-    text-decoration-color: white;
+    text-decoration-color: var(--link-color);
 }
 
 /* Changing the color and adding an underline on hover of anchor tags */
 a:hover{
-    color: grey;
+    color: var(--link-hover-color);
     text-decoration: underline;
 }
 
 /* Styling the logo */
 .logo{
     font-size: 2rem;
+    color: var(--link-color);
 }
 
 /* Changing the cursor to default on hover of the logo */
 .logo:hover{
     cursor: default;
 }
-
 
 /* Hamburger Menu */
 
@@ -99,19 +105,19 @@ a:hover{
     width: 100%;
     height: 2px;
     background-color: black;
-    transition: all 0.3s ease-in-out;
+    transition: all var(--transition-speed) ease-in-out;
 }
 
 /* Styling the links inside the hamburger menu */
 .menu-links {
     position: absolute;
     top: 100%;
-    right: 0;
-    background-color: white;
+    right: 10px;
+    background-color: #c4c4c4;
     width: fit-content;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
+    transition: all var(--transition-speed) ease-in-out;
 }
 
 /* Styling the anchor tags inside the menu links */
@@ -119,10 +125,10 @@ a:hover{
     display: block;
     padding: 10px;
     text-align: center;
-    font-size: 1.5rem;
-    color: black;
+    font-size: 1rem;
+    color: var(--text-main-color);
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    transition: all var(--transition-speed) ease-in-out;
 }
 
 /* Styling the list items in the menu */
@@ -165,6 +171,7 @@ a:hover{
     transform: none;
 }
 
+
 /* SECTIONS */
 
 /* Styling the container  */
@@ -184,14 +191,12 @@ a:hover{
 /* Styling the h2 tag within the container class */
 .container h2 {
     font-size: 2rem;
-    color: #333;
 }
 
 /* Styling the paragraph tag within the container class */
 .container p {
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #666;
 }
 
 /* Styling the section tag */
@@ -224,6 +229,7 @@ section {
 /* Styling the title class */
 .title {
     font-size: 3rem;
+    margin-top: -5rem;
     margin-bottom: 2rem;
     cursor: default;
 }
@@ -231,18 +237,22 @@ section {
 /* Styling the profile-info-container class */
 .profile-info-container {
     display: flex;
-    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
 }
 
 /* Styling the profile-img class */
 .profile-img {
-    height: 250px;
-    width: 250px;
+    max-width: 268px; /* Set a max-width for the image container */
+    width: 100%; /* Make the container width responsive */
+    height: auto; /* Maintain aspect ratio of the image */
+    margin: 0 auto;
 }
+
 
 /* Styling the section-text class */
 .section-text {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -255,7 +265,7 @@ section {
 }
 
 /* Styling the section-text-paragraph class */
-.section-text-paragraph {
+.section-text-paragraph{
     margin-bottom: 1rem;
     font-size: 2.25rem;
 }
