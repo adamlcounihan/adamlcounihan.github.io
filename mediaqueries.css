@@ -1,7 +1,10 @@
 /* Media query for screens larger than 1200px */
 @media screen and (min-width: 1200px) {
     .title {
-        margin-top: -20vh;
+        margin-top: 5vh;
+    }
+    .about-container {
+        padding: 0 10rem;
     }
 }
 
@@ -13,11 +16,22 @@
     #hamburger-nav {
         display: flex;
     }
+    .about-container {
+        padding: 0 5rem;
+    }
 }
 
 /* Media query for screens with a maximum width of 600px */
 @media screen and (max-width: 600px) {
+    #about{
+        margin-top: 15vw;
+    }
+
     .profile-info-container {
+        display: block;
+    }
+
+    .about-container {
         display: block;
     }
 
@@ -27,10 +41,18 @@
         margin-bottom: -2vw;
     }
 
+    #about .title{
+        margin-top: -50vw;
+    }
+
     .section-text-header,
     .section-text-paragraph {
         font-size: 6vw;
         width: 90vw;
+    }
+    .about-container {
+        padding: 0 1rem;
+        display: block;
     }
 }
 
@@ -44,5 +66,8 @@
     #socials-container img {
         width: 13vw;
         height: 13vw;
+    }
+    .about-container {
+        padding: 0 1rem;
     }
 }

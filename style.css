@@ -174,14 +174,6 @@ a:hover{
 
 /* SECTIONS */
 
-/* Styling the container  */
-.section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-    min-height: fit-content;
-}
-
 /* Styling the header */
 .container header {
     text-align: center;
@@ -213,49 +205,12 @@ section {
     display: flex;
 }
 
-/* PROFILE */
-
-/* Styling the profile id */
-#profile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-    height: 80vh;
-    text-align: center;
-}
-
-/* Styling the title class */
-.title {
-    font-size: 3rem;
-    margin-top: -5rem;
-    margin-bottom: 2rem;
-    cursor: default;
-}
-
-/* Styling the profile-info-container class */
-.profile-info-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-}
-
-/* Styling the profile-img class */
-.profile-img {
-    max-width: 268px; /* Set a max-width for the image container */
-    width: 100%; /* Make the container width responsive */
-    height: auto; /* Maintain aspect ratio of the image */
-    margin: 0 auto;
-}
-
-
 /* Styling the section-text class */
 .section-text {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 /* Styling the section-text-header class */
@@ -270,6 +225,45 @@ section {
     font-size: 2.25rem;
 }
 
+/* Styling the title class */
+.title {
+    font-size: 3rem;
+    margin-top: -5rem;
+    margin-bottom: 2rem;
+    cursor: default;
+    justify-content: center;
+    align-items: center;
+}
+
+/* PROFILE */
+
+/* Styling the profile id */
+#profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 80vh;
+    text-align: center;
+}
+
+/* Styling the profile-info-container class */
+.profile-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* Styling the profile-img class */
+.profile-img {
+    max-width: 268px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
 /* Styling the socials-container id */
 #socials-container {
     display: flex;
@@ -277,4 +271,29 @@ section {
     margin-top: 1rem;
     gap: 1rem;
 }
+
+/* ABOUT */
+
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 80vh;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Styling the about-container class */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 10rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 
