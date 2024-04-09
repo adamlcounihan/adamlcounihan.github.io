@@ -33,15 +33,19 @@ a, .btn {
 
 /*Desktop Nav*/
 
-/* Styling the navigation bar */
-nav{
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 17vh;
+    height: 10vh;
     background-color: var(--nav-bg-color);
+    z-index: 1000;
 }
+
 
 /* Styling the navigation links */
 .nav-links{
@@ -66,7 +70,7 @@ a:hover{
 
 /* Styling the logo */
 .logo{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--link-color);
 }
 
@@ -193,8 +197,7 @@ a:hover{
 
 /* Styling the section tag */
 section {
-    padding-top: 4vh;
-    height: 96vh;
+    height: 90vh;
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
@@ -243,9 +246,11 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
-    height: 80vh;
+    height: 100vh;
     text-align: center;
+    margin: 0 auto;
+    padding-top: 12vh;
+    background-color: #ffff;
 }
 
 /* Styling the profile-info-container class */
@@ -279,10 +284,10 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
-    height: 80vh;
+    height: 90vh;
     text-align: center;
     margin: 0 auto;
+    background-color: #d3d3d3;
 }
 
 /* Styling the about-container class */
@@ -290,7 +295,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
     padding: 0 10rem;
     max-width: 1200px;
     margin: 0 auto;

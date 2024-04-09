@@ -1,13 +1,3 @@
-/* Media query for screens larger than 1200px */
-@media screen and (min-width: 1200px) {
-    .title {
-        margin-top: 5vh;
-    }
-    .about-container {
-        padding: 0 10rem;
-    }
-}
-
 /* Media query for screens with a maximum width of 1200px */
 @media screen and (max-width: 1200px) {
     #desktop-nav {
@@ -16,17 +6,16 @@
     #hamburger-nav {
         display: flex;
     }
+    .section-text-header,
+    .section-text-paragraph {
+        font-size: 3vw;
+    }
     .about-container {
         padding: 0 5rem;
-    }
 }
 
-/* Media query for screens with a maximum width of 600px */
-@media screen and (max-width: 600px) {
-    #about{
-        margin-top: 15vw;
-    }
-
+/* Media query for screens with a maximum width of 650px */
+@media screen and (max-width: 650px) {
     .profile-info-container {
         display: block;
     }
@@ -38,16 +27,11 @@
     .title {
         font-size: 10vw;
         width: 80vw;
-        margin-bottom: -2vw;
-    }
-
-    #about .title{
-        margin-top: -50vw;
     }
 
     .section-text-header,
     .section-text-paragraph {
-        font-size: 6vw;
+        font-size: 5vw;
         width: 90vw;
     }
     .about-container {
