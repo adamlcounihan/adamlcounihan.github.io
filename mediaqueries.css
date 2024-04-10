@@ -12,6 +12,7 @@
     }
     .about-container {
         padding: 0 5rem;
+    }
 }
 
 /* Media query for screens with a maximum width of 650px */
@@ -55,3 +56,4 @@
         padding: 0 1rem;
     }
 }
+
