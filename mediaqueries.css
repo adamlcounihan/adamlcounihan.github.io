@@ -39,6 +39,19 @@
         padding: 0 1rem;
         display: block;
     }
+    .experience-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-container {
+        justify-content: center;
+    }
+    .list-container {
+        width: 80%; /* adjust as needed */
+        margin: 0 auto; /* centers the container */
+    }
+
 }
 
 /* Media query for screens with a maximum width of 400px */
