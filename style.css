@@ -6,6 +6,8 @@
     --link-color: white;
     --link-hover-color: #F3D3BD;
     --transition-speed: 300ms;
+    --content-background-white: #ffff;
+    --content-background-grey: #d3d3d3
 }
 
 /* Resetting default margins and padding for all elements */
@@ -55,18 +57,19 @@ nav {
     font-size: 1.5rem;
 }
 
-/* Styling the anchor tags */
-a{
+/* Styling the anchor tags within #desktop-nav */
+#desktop-nav a {
     color: var(--link-color);
     text-decoration: none;
     text-decoration-color: var(--link-color);
 }
 
-/* Changing the color and adding an underline on hover of anchor tags */
-a:hover{
+/* Changing the color and adding an underline on hover of anchor tags within #desktop-nav */
+#desktop-nav a:hover {
     color: var(--link-hover-color);
     text-decoration: underline;
 }
+
 
 /* Styling the logo */
 .logo{
@@ -251,7 +254,7 @@ section {
     text-align: center;
     margin: 0 auto;
     padding-top: 12vh;
-    background-color: #ffff;
+    background-color: var(--content-background-white);
 }
 
 /* Styling the profile-info-container class */
@@ -290,7 +293,7 @@ section {
     text-align: center;
     margin: 0 auto;
     padding-top: 12vh;
-    background-color: #d3d3d3;
+    background-color: var(--content-background-grey);
 }
 
 /* Styling the about-container class */
@@ -386,7 +389,7 @@ article p {
     margin: 0 auto;
     position: relative;
     padding-top: 30vh;
-    background-color: #d3d3d3;
+    background-color: var(--content-background-grey);
 }
 
 .project-img {
@@ -437,4 +440,13 @@ article p {
     background: rgb(53, 53, 53);
     color: white;
     border-color: white;
+}
+
+/* FOOTER SECTION */
+footer{
+    background-color: var(--content-background-grey);
+}
+
+footer p{
+    text-align: center;
 }
