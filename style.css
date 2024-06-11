@@ -285,7 +285,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     text-align: center;
     margin: 0 auto;
     padding-top: 12vh;
@@ -309,23 +310,25 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     text-align: center;
     margin: 0 auto;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 #experience h2.title {
     margin-top: 10rem;
 }
 .list-container{
-    padding: 1.5rem; /* Adjust padding for inner spacing */
+    padding: 1.5rem;
     flex: 1;
     background: white;
     border-radius: 2rem;
     border: 0.1rem solid rgb(163, 163, 163);
     text-align: center;
-    margin: 0.5rem; /* Adjust margin for outer spacing */
+    margin: 0.5rem;
 }
 
 .experience-container {
@@ -368,4 +371,70 @@ article img {
 
 article p {
     font-size: 1.5rem;
+}
+
+/* PROJECTS */
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 100vh;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 30vh;
+    background-color: #d3d3d3;
+}
+
+.project-img {
+    border-radius: 2rem;
+    width: 100%;
+    height: auto;
+}
+
+.project-title {
+    margin: 1rem;
+    color: black;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.list-container {
+    flex: 0 0 300px;
+    margin: 1rem;
+    height: auto;
+    min-height: 350px;
+}
+
+/* BUTTONS */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn{
+    font-weight: 600;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+    transition: all 300ms ease;
+    cursor: pointer;
+    background: none;
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn:hover{
+    background: rgb(53, 53, 53);
+    color: white;
+    border-color: white;
 }
