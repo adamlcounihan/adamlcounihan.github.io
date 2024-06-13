@@ -4,8 +4,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    
+
+<!-- Desktop navigation -->
+<nav id="desktop-nav">
+    <div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </div>
+    <div class="logo">Adam Counihan</div>
+</nav>
+
+<!-- Mobile Navigation Section -->
+<nav id="hamburger-nav">
+    <div class="logo">Adam Counihan</div>
+    <div class="hamburger-menu">
+
+        <!-- Hamburger Icon to toggle menu -->
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Menu Links -->
+        <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Profile Section -->
+<section id="profile">
+
+    <div class="profile-info-container">
+        <!-- Profile Image -->
+        <div class="profile-img">
+            <img src="./images/profile.png" width="350" height="350" alt="Profile Picture">
+        </div>
+
+        <!-- Profile Description -->
+        <div class="section-text">
+            <p class="section-text-header">Adam Counihan</p>
+            <p class="section-text-paragraph">Currently studying Computer Science at <br> University of Kent (B.Sc.)</p>
+
+            <!-- Social Media Links (All icons from Icons8.com) -->
+            <div id="socials-container">
+                <a href="https://github.com/adamlcounihan" target="_blank"><img src="./icons/github.png" width="40" height="40" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/adamlcounihan/" target="_blank"><img src="./icons/linkedin.png" width="40" height="40" alt="Linkedin"></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About Section -->
+<section id="about">
+    <!-- Section Title -->
+    <h2 class="title">About Me</h2>
+
+    <div class="about-container">
+        <!-- About Description -->
+        <div class="section-text">
+            <p class="section-text-paragraph">I am deeply fascinated by the way that technology interacts with society,
+                and how technological advancements can have a major impact on the way we live (both good and bad!).</p>
+            <p class="section-text-paragraph">In my spare time, I enjoy exploring new technologies, reading about their
+                potential implications, and imagining how they might shape our future.
+        </div>
+    </div>
+</section>
+<!-- Experience Section -->
+<section id="experience">
+    <!-- Section Title -->
+    <h2 class="title">Experience</h2>
+
+    <div class="experience-container">
+        <div class="experience-list">
+            <div class="list-container">
+                <h2 class="section-text-paragraph">Frontend Development</h2>
+                <div class="article-container">
+                    <article>
+                        <img src="./icons/bulletpoint.png" width="40" height="40" alt="Experience list icon"/>
+                        <p>HTML</p>
+                    </article>
+                    <article>
+                        <img src="./icons/bulletpoint.png" width="40" height="40" alt="Experience list icon"/>
+                        <p>CSS</p>
+                    </article>
+                    <article>
+                        <img src="./icons/bulletpoint.png"  width="40" height="40" alt="Experience list icon"/>
+                        <p>JavaScript</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="list-container">
+                <h2 class="section-text-paragraph">Backend Development</h2>
+                <div class="article-container">
+                    <article>
+                        <img src="./icons/bulletpoint.png" width="40" height="40" alt="Experience list icon"/>
+                        <p>Java</p>
+                    </article>
+                    <article>
+                        <img src="./icons/bulletpoint.png" width="40" height="40" alt="Experience list icon"/>
+                        <p>Python</p>
+                    </article>
+                    <article>
+                        <img src="./icons/bulletpoint.png" width="40" height="40" alt="Experience list icon"/>
+                        <p>PHP</p>
+                    </article>
+                    <article>
+                        <img src="./icons/bulletpoint.png" width="40" height="40" alt="Experience list icon"/>
+                        <p>Unix</p>
+                    </article>
+                    <article>
+                        <img src="./icons/bulletpoint.png" width="40" height="40" alt="Experience list icon"/>
+                        <p>C</p>
+                    </article>
+                    <article>
+                        <img src="./icons/bulletpoint.png" width="40" height="40" alt="Experience list icon"/>
+                        <p>C#</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Projects Section -->
+<section id="projects">
+    <!-- Section Title -->
+    <h2 class="title">Projects</h2>
+
+    <div class="project-list">
+        <div class="list-container">
+            <img src="./images/project-1.jpg" alt="Project 1" width="672" height="379" class="project-img"/>
+            <h2 class="project-title">The Land of Nasrin</h2>
+            <div class="btn-container">
+                <button class="btn" type="button" onclick="window.open('https://github.com/adamlcounihan/TheLandOfNasrin', '_blank')">Github</button>
+            </div>
+            <p>A Unity platformer game that I created for my A-Level Computer Science NEA.</p>
+        </div>
+        <div class="list-container">
+            <img src="./images/project-2.jpg" alt="Project 2" width="672" height="379" class="project-img"/>
+            <h2 class="project-title">This Website!</h2>
+            <div class="btn-container">
+                <button class="btn" type="button" onclick="window.open('https://github.com/adamlcounihan/adamlcounihan.github.io', '_blank')">Github</button>
+            </div>
+            <p>A static website to show my skills and experiences, in a fun way.</p>
+        </div>
+        <div class="list-container">
+            <img src="./images/project-3.jpg" alt="Project 3" width="672" height="379" class="project-img"/>
+            <h2 class="project-title">Fruit Machine</h2>
+            <div class="btn-container">
+                <button class="btn" type="button" onclick="window.open('https://github.com/adamlcounihan/FruitMachine', '_blank')">Github</button>
+            </div>
+            <p>A text-based fruit machine program written in Python.</p>
+        </div>
+        <div class="list-container">
+            <img src="./images/project-4.jpg" alt="Project 4" width="672" height="379" class="project-img"/>
+            <h2 class="project-title">Combination Lock</h2>
+            <div class="btn-container">
+                <button class="btn" type="button" onclick="window.open('https://github.com/adamlcounihan/CombinationLock', '_blank')">Github</button>
+            </div>
+            <p>A text-based combination guessing program written in C.</p>
+        </div>
+    </div>
+</section>
+<!-- Footer Section -->
+<footer>
+    <p>Copyright © 2024 Adam Counihan. All Rights Reserved <br> Icons by <a href="https://www.icons8.com" target="_blank">Icons8</a></p>
+</footer>
 </body>
 </html>

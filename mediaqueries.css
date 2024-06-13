@@ -1,0 +1,78 @@
+/* Media query for screens with a maximum width of 1200px */
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+        display: none;
+    }
+    #hamburger-nav {
+        display: flex;
+    }
+    .section-text-header,
+    .section-text-paragraph {
+        font-size: 3vw;
+    }
+    .about-container {
+        padding: 0 5rem;
+    }
+}
+
+/* Media query for screens with a maximum width of 650px */
+@media screen and (max-width: 650px) {
+    .profile-info-container {
+        display: block;
+    }
+
+    .about-container {
+        display: block;
+    }
+
+    .title {
+        font-size: 10vw;
+        width: 80vw;
+    }
+
+    .section-text-header,
+    .section-text-paragraph {
+        font-size: 5vw;
+        width: 90vw;
+    }
+
+    .about-container {
+        padding: 0 1rem;
+        display: block;
+    }
+
+    .experience-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-container {
+        justify-content: center;
+    }
+
+    .article-container article {
+        margin: 2px 0; /* Adjusts the margin for each article */
+        padding: 0; /* Adjusts the padding for each article */
+    }
+
+    .list-container {
+        width: 80%; /* adjust as needed */
+        margin: 0 auto; /* centers the container */
+    }
+
+    .project-list .list-container {
+        margin-bottom: 20px;
+    }
+}
+
+/* Media query for screens with a maximum width of 400px */
+@media screen and (max-width: 400px) {
+    #socials-container img {
+        width: 13vw;
+        height: 13vw;
+    }
+    .about-container {
+        padding: 0 1rem;
+    }
+}
+
