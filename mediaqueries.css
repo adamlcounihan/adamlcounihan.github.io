@@ -63,6 +63,10 @@
     .project-list .list-container {
         margin-bottom: 20px;
     }
+    
+    .profile-img img{
+        width: 20vh
+    }
 }
 
 /* Media query for screens with a maximum width of 400px */
