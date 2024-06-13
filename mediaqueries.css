@@ -67,11 +67,6 @@
 
 /* Media query for screens with a maximum width of 400px */
 @media screen and (max-width: 400px) {
-    .profile-img img {
-        max-height: 20vh;
-        min-height: 4.5vh;
-    }
-
     #socials-container img {
         width: 13vw;
         height: 13vw;
