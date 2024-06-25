@@ -1,10 +1,13 @@
 /*General*/
 
 :root {
-    --text-main-color: white;
-    --nav-bg-color: #3f8353;
-    --link-hover-color: #323030;
-    --darkmode-background: rgb(43, 43, 43);
+    --primary-color: #3f8353;
+    --secondary-color: #376996;
+    --tertiary-color: #38706f;
+    --link-hover-color: #97d1cf;
+    --text-color: white;
+    --background-gray: #3d3d3d;
+    --darkmode-background: #1f1d1d;
     --transition-speed: 300ms;
 }
 
@@ -25,7 +28,7 @@ html {
 
 /* Setting the color for all paragraph text */
 p {
-    color: var(--text-main-color);
+    color: var(--text-color);
 }
 
 /*Transition*/
@@ -46,7 +49,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 10vh;
-    background-color: var(--nav-bg-color);
+    background-color: var(--primary-color);
     z-index: 1000;
     border-bottom: 2px solid #b6b6b6;
 }
@@ -65,7 +68,7 @@ nav a{
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--text-main-color);
+    color: var(--text-color);
 }
 
 nav a:hover {
@@ -133,14 +136,16 @@ section {
 .section-text-header {
     font-weight: 600;
     font-size: 2.5rem;
-    color: var(--text-main-color);
+    color: var(--secondary-color);
+    cursor: default;
 }
 
 /* Styling the section-text-paragraph class */
 .section-text-paragraph{
     margin-bottom: 1rem;
     font-size: 2.25rem;
-    color: var(--text-main-color);
+    color: var(--text-color);
+    cursor: default;
 }
 
 /* Styling the title class */
@@ -151,7 +156,7 @@ section {
     cursor: default;
     justify-content: center;
     align-items: center;
-    color: var(--text-main-color);
+    color: var(--secondary-color);
 }
 
 /* PROFILE */
@@ -247,6 +252,7 @@ section {
     margin: 1rem;
     height: auto;
     min-height: 350px;
+    background: var(--background-gray);
 }
 
 .experience-container {
@@ -316,7 +322,7 @@ article p {
 
 .project-title {
     margin: 1rem;
-    color: var(--text-main-color);
+    color: var(--text-color);
 }
 
 .project-list {
@@ -342,9 +348,9 @@ article p {
     border-radius: 2rem;
     transition: var(--transition-speed) ease;
     cursor: pointer;
-    background: var(--nav-bg-color);
+    background: var(--tertiary-color);
     border: rgb(195, 195, 195) 0.1rem solid;
-    color: var(--text-main-color);
+    color: var(--text-color);
 }
 
 .btn:hover{
@@ -363,5 +369,9 @@ footer p{
 }
 
 footer a {
-    color: var(--nav-bg-color);
+    color: var(--primary-color);
+}
+
+footer a:hover {
+    color: var(--link-hover-color);
 }
