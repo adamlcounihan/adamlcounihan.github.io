@@ -1,13 +1,43 @@
 /*General*/
 
 :root {
-    --text-main-color: #423e3e;
-    --nav-bg-color: #386641;
-    --link-color: white;
-    --link-hover-color: #F3D3BD;
+    /* DEFAULT THEME (DARK MODE)*/
+    --primary-color: #3f8353;
+    --secondary-color: #376996;
+    --tertiary-color: #38706f;
+    --accent-colour: #333333;
+    --background-color: #1f1d1d;
+    --text-color: #ffffff;
+
+    /* ALTERNATE THEME (LIGHT MODE) */
+    --lightmode-primary-color: #3f8353;
+    --lightmode-secondary-color: #729fcd;
+    --lightmode-tertiary-color: #6ba09c;
+    --lightmode-accent: #ffffff;
+    --lightmode-background: #ffffff;
+    --lightmode-text-color: #333333;
+
     --transition-speed: 300ms;
-    --content-background-white: #ffff;
-    --content-background-grey: #d3d3d3
+}
+
+body {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+}
+
+body.light-mode {
+    --primary-color: var(--lightmode-primary-color);
+    --secondary-color: var(--lightmode-secondary-color);
+    --tertiary-color: var(--lightmode-tertiary-color);
+    --accent-colour: var(--lightmode-accent);
+    --background-color: var(--lightmode-background);
+    --text-color: var(--lightmode-text-color);
+}
+
+#theme-toggle {
+    position: relative;
+    top: -17vh;
+    right: -40vw;
 }
 
 /* Resetting default margins and padding for all elements */
@@ -23,7 +53,7 @@ html {
 
 /* Setting the color for all paragraph text */
 p {
-    color: var(--text-main-color);
+    color: var(--text-color);
 }
 
 /*Transition*/
@@ -33,7 +63,7 @@ a, .btn {
     transition: all var(--transition-speed) ease;
 }
 
-/*Desktop Nav*/
+/* NAVIGATION */
 
 nav {
     position: fixed;
@@ -44,138 +74,46 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 10vh;
-    background-color: var(--nav-bg-color);
+    background-color: var(--primary-color);
     z-index: 1000;
+    border-bottom: 2px solid #b6b6b6;
 }
 
-
-/* Styling the navigation links */
-.nav-links{
+.links-container{
+    height: 100%;
+    width: 100%;
     display: flex;
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.5rem;
+    flex-direction: row;
+    align-items: center;
 }
 
-/* Styling the anchor tags within #desktop-nav */
-#desktop-nav a {
-    color: var(--link-color);
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    text-decoration-color: var(--link-color);
+    color: var(--text-color);
 }
 
-/* Changing the color and adding an underline on hover of anchor tags within #desktop-nav */
-#desktop-nav a:hover {
-    color: var(--link-hover-color);
-    text-decoration: underline;
+nav a:hover {
+    background-color: var(--tertiary-color);
 }
 
-
-/* Styling the logo */
-.logo{
-    font-size: 1.5rem;
-    color: var(--link-color);
+nav .home-link{
+    margin-right: auto;
 }
 
-/* Changing the cursor to default on hover of the logo */
-.logo:hover{
-    cursor: default;
-}
-
-/* Hamburger Menu */
-
-/* Hiding the hamburger navigation by default */
-#hamburger-nav{
+#sidebar-active{
     display: none;
 }
 
-/* Positioning and displaying the hamburger menu */
-.hamburger-menu{
-    position: absolute;
-    right: 0;
-    display: inline-block;
-    margin-right: 20px;
+.open-sidebar-button, .close-sidebar-button{
+    display: none;
 }
 
-/* Styling the hamburger icon */
-.hamburger-icon{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 24px;
-    width: 30px;
-    cursor: pointer;
-}
-
-/* Styling the spans inside the hamburger icon */
-.hamburger-icon span {
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    transition: all var(--transition-speed) ease-in-out;
-}
-
-/* Styling the links inside the hamburger menu */
-.menu-links {
-    position: absolute;
-    top: 100%;
-    right: 10px;
-    background-color: #c4c4c4;
-    width: fit-content;
-    max-height: 0;
-    overflow: hidden;
-    transition: all var(--transition-speed) ease-in-out;
-}
-
-/* Styling the anchor tags inside the menu links */
-.menu-links a {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    font-size: 1rem;
-    color: var(--text-main-color);
-    text-decoration: none;
-    transition: all var(--transition-speed) ease-in-out;
-}
-
-/* Styling the list items in the menu */
-.menu-links li {
-    list-style: none;
-}
-
-/* Styling the menu links when open */
-.menu-links.open {
-    max-height: 300px;
-}
-
-/* Styling the first child of the hamburger icon when open */
-.hamburger-icon.open span:first-child {
-    transform: rotate(45deg) translate(10px, 5px);
-}
-
-/* Styling the second child of the hamburger icon when open */
-.hamburger-icon.open span:nth-child(2) {
-    opacity: 0;
-}
-
-/* Styling the last child of the hamburger icon when open */
-.hamburger-icon.open span:last-child {
-    transform: rotate(-45deg) translate(10px, -5px);
-}
-
-/* Resetting the styles of the first child of the hamburger icon */
-.hamburger-icon span:first-child {
-    transform: none;
-}
-
-/* Resetting the styles of the second child of the hamburger icon */
-.hamburger-icon span:first-child {
-    opacity: 1;
-}
-
-/* Resetting the styles of the last child of the hamburger icon */
-.hamburger-icon span:first-child {
-    transform: none;
+.open-sidebar-button {
+    margin-right: auto;
 }
 
 
@@ -217,19 +155,22 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    max-width: 80%;
 }
 
 /* Styling the section-text-header class */
 .section-text-header {
     font-weight: 600;
     font-size: 2.5rem;
+    color: var(--primary-color);
+    cursor: default;
 }
 
 /* Styling the section-text-paragraph class */
 .section-text-paragraph{
     margin-bottom: 1rem;
     font-size: 2.25rem;
+    color: var(--text-color);
+    cursor: default;
 }
 
 /* Styling the title class */
@@ -240,6 +181,7 @@ section {
     cursor: default;
     justify-content: center;
     align-items: center;
+    color: var(--primary-color);
 }
 
 /* PROFILE */
@@ -254,7 +196,6 @@ section {
     text-align: center;
     margin: 0 auto;
     padding-top: 12vh;
-    background-color: var(--content-background-white);
 }
 
 /* Styling the profile-info-container class */
@@ -293,7 +234,6 @@ section {
     text-align: center;
     margin: 0 auto;
     padding-top: 12vh;
-    background-color: var(--content-background-grey);
 }
 
 /* Styling the about-container class */
@@ -324,14 +264,17 @@ section {
 #experience h2.title {
     margin-top: 10rem;
 }
+
 .list-container{
     padding: 1.5rem;
-    flex: 1;
-    background: white;
     border-radius: 2rem;
-    border: 0.1rem solid rgb(163, 163, 163);
+    border: 0.4rem solid var(--tertiary-color);
     text-align: center;
-    margin: 0.5rem;
+    flex: 0 0 300px;
+    margin: 1rem;
+    height: auto;
+    min-height: 350px;
+    background-color: var(--accent-colour);
 }
 
 .experience-container {
@@ -389,7 +332,6 @@ article p {
     margin: 0 auto;
     position: relative;
     padding-top: 30vh;
-    background-color: var(--content-background-grey);
 }
 
 .project-img {
@@ -401,7 +343,7 @@ article p {
 
 .project-title {
     margin: 1rem;
-    color: black;
+    color: var(--text-color);
 }
 
 .project-list {
@@ -409,13 +351,6 @@ article p {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
-}
-
-.list-container {
-    flex: 0 0 300px;
-    margin: 1rem;
-    height: auto;
-    min-height: 350px;
 }
 
 /* BUTTONS */
@@ -432,23 +367,28 @@ article p {
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
-    transition: all 300ms ease;
+    transition: var(--transition-speed) ease;
     cursor: pointer;
-    background: none;
-    border: rgb(53, 53, 53) 0.1rem solid;
+    background: var(--secondary-color);
+    border: rgb(195, 195, 195) 0.1rem solid;
+    color: var(--text-color);
 }
 
 .btn:hover{
-    background: rgb(53, 53, 53);
+    background: var(--primary-color);
     color: white;
     border-color: white;
 }
 
 /* FOOTER SECTION */
-footer{
-    background-color: var(--content-background-grey);
-}
-
 footer p{
     text-align: center;
+}
+
+footer a {
+    color: var(--primary-color);
+}
+
+footer a:hover {
+    color: var(--tertiary-color);
 }
