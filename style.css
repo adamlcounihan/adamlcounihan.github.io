@@ -1,18 +1,43 @@
 /*General*/
 
 :root {
+    /* DEFAULT THEME (DARK MODE)*/
     --primary-color: #3f8353;
     --secondary-color: #376996;
     --tertiary-color: #38706f;
-    --link-hover-color: #97d1cf;
-    --text-color: white;
-    --background-gray: #3d3d3d;
-    --darkmode-background: #1f1d1d;
+    --accent-colour: #333333;
+    --background-color: #1f1d1d;
+    --text-color: #ffffff;
+
+    /* ALTERNATE THEME (LIGHT MODE) */
+    --lightmode-primary-color: #3f8353;
+    --lightmode-secondary-color: #729fcd;
+    --lightmode-tertiary-color: #6ba09c;
+    --lightmode-accent: #ffffff;
+    --lightmode-background: #ffffff;
+    --lightmode-text-color: #333333;
+
     --transition-speed: 300ms;
 }
 
 body {
     font-family: 'Poppins', 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+}
+
+body.light-mode {
+    --primary-color: var(--lightmode-primary-color);
+    --secondary-color: var(--lightmode-secondary-color);
+    --tertiary-color: var(--lightmode-tertiary-color);
+    --accent-colour: var(--lightmode-accent);
+    --background-color: var(--lightmode-background);
+    --text-color: var(--lightmode-text-color);
+}
+
+#theme-toggle {
+    position: relative;
+    top: -17vh;
+    right: -40vw;
 }
 
 /* Resetting default margins and padding for all elements */
@@ -72,7 +97,7 @@ nav a{
 }
 
 nav a:hover {
-    background-color: var(--link-hover-color);
+    background-color: var(--tertiary-color);
 }
 
 nav .home-link{
@@ -136,7 +161,7 @@ section {
 .section-text-header {
     font-weight: 600;
     font-size: 2.5rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     cursor: default;
 }
 
@@ -156,7 +181,7 @@ section {
     cursor: default;
     justify-content: center;
     align-items: center;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 /* PROFILE */
@@ -171,7 +196,6 @@ section {
     text-align: center;
     margin: 0 auto;
     padding-top: 12vh;
-    background-color: var(--darkmode-background);
 }
 
 /* Styling the profile-info-container class */
@@ -210,7 +234,6 @@ section {
     text-align: center;
     margin: 0 auto;
     padding-top: 12vh;
-    background-color: var(--darkmode-background);
 }
 
 /* Styling the about-container class */
@@ -236,7 +259,6 @@ section {
     margin: 0 auto;
     position: relative;
     padding-bottom: 1rem;
-    background-color: var(--darkmode-background);
 }
 
 #experience h2.title {
@@ -246,13 +268,13 @@ section {
 .list-container{
     padding: 1.5rem;
     border-radius: 2rem;
-    border: 0.4rem solid rgb(163, 163, 163);
+    border: 0.4rem solid var(--tertiary-color);
     text-align: center;
     flex: 0 0 300px;
     margin: 1rem;
     height: auto;
     min-height: 350px;
-    background: var(--background-gray);
+    background-color: var(--accent-colour);
 }
 
 .experience-container {
@@ -310,7 +332,6 @@ article p {
     margin: 0 auto;
     position: relative;
     padding-top: 30vh;
-    background-color: var(--darkmode-background);
 }
 
 .project-img {
@@ -348,22 +369,18 @@ article p {
     border-radius: 2rem;
     transition: var(--transition-speed) ease;
     cursor: pointer;
-    background: var(--tertiary-color);
+    background: var(--secondary-color);
     border: rgb(195, 195, 195) 0.1rem solid;
     color: var(--text-color);
 }
 
 .btn:hover{
-    background: var(--link-hover-color);
+    background: var(--primary-color);
     color: white;
     border-color: white;
 }
 
 /* FOOTER SECTION */
-footer{
-    background-color: var(--darkmode-background);
-}
-
 footer p{
     text-align: center;
 }
@@ -373,5 +390,5 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--link-hover-color);
+    color: var(--tertiary-color);
 }
