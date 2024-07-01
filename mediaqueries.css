@@ -66,7 +66,6 @@
     .section-text-header,
     .section-text-paragraph {
         font-size: 5vw;
-        width: 90vw;
     }
 
     .about-container {
@@ -89,7 +88,6 @@
     }
 
     .list-container {
-        width: 80%;
         margin: 0 auto;
     }
 
