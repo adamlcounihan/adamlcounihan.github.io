@@ -2,20 +2,22 @@
 
 :root {
     /* DEFAULT THEME (DARK MODE)*/
-    --primary-color: #3f8353;
-    --secondary-color: #376996;
-    --tertiary-color: #38706f;
-    --accent-colour: #333333;
-    --background-color: #1f1d1d;
-    --text-color: #ffffff;
+    --primary-color: #0ebc36;
+    --secondary-color: #7D5BA6;
+    --tertiary-color: #0ebc8a;
+    --background-color: #18181b;
+    --sidebar-color: #3a3a3d;
+    --paragraph-text: #ffffff;
+    --link-color: #1c7eff;
 
     /* ALTERNATE THEME (LIGHT MODE) */
-    --lightmode-primary-color: #3f8353;
-    --lightmode-secondary-color: #729fcd;
-    --lightmode-tertiary-color: #6ba09c;
-    --lightmode-accent: #d9d4d4;
-    --lightmode-background: #ffffff;
-    --lightmode-text-color: #333333;
+    --lightmode-primary-color: #0a8f29;
+    --lightmode-secondary-color: #553b8a;
+    --lightmode-tertiary-color: #06da9c;
+    --lightmode-background-color: #fdfdfd;
+    --lightmode-sidebar-color: #dedede;
+    --lightmode-paragraph-text: #18181b;
+    --lightmode-link-color: #013fa6;
 
     --transition-speed: 300ms;
 }
@@ -29,9 +31,10 @@ body.light-mode {
     --primary-color: var(--lightmode-primary-color);
     --secondary-color: var(--lightmode-secondary-color);
     --tertiary-color: var(--lightmode-tertiary-color);
-    --accent-colour: var(--lightmode-accent);
-    --background-color: var(--lightmode-background);
-    --text-color: var(--lightmode-text-color);
+    --background-color: var(--lightmode-background-color);
+    --sidebar-color: var(--lightmode-sidebar-color);
+    --paragraph-text: var(--lightmode-paragraph-text);
+    --link-color: var(--lightmode-link-color);
 }
 
 
@@ -48,7 +51,7 @@ html {
 
 /* Setting the color for all paragraph text */
 p {
-    color: var(--text-color);
+    color: var(--paragraph-text);
 }
 
 /*Transition*/
@@ -69,9 +72,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    background-color: var(--primary-color);
     z-index: 1000;
-    border-bottom: 2px solid #b6b6b6;
+    background-color: var(--background-color);
 }
 
 .links-container{
@@ -88,11 +90,12 @@ nav a{
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--paragraph-text);
 }
 
 nav a:hover {
-    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 nav #theme-toggle {
@@ -153,27 +156,25 @@ section {
     text-align: center;
 }
 
-/* Styling the section-text-header class */
-.section-text-header {
-    font-weight: 600;
-    font-size: 2.5rem;
-    color: var(--primary-color);
+/* Styling the subheader-text class */
+.subheader-text {
+    margin: 1rem;
+    font-size: 2rem;
+    color: var(--paragraph-text);
     cursor: default;
 }
 
-/* Styling the section-text-paragraph class */
-.section-text-paragraph{
+/* Styling the paragraph-text class */
+.paragraph-text{
     margin-bottom: 1rem;
     font-size: 2.25rem;
-    color: var(--text-color);
+    color: var(--paragraph-text);
     cursor: default;
 }
 
 /* Styling the title class */
 .title {
     font-size: 3rem;
-    margin-top: -5rem;
-    margin-bottom: 2rem;
     cursor: default;
     justify-content: center;
     align-items: center;
@@ -225,8 +226,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
-    min-height: 100vh;
     text-align: center;
     margin: 0 auto;
     padding-top: 12vh;
@@ -262,6 +261,7 @@ section {
 }
 
 .list-container{
+    position: relative;
     padding: 1.5rem;
     border-radius: 2rem;
     border: 0.2rem solid var(--tertiary-color);
@@ -269,7 +269,9 @@ section {
     flex: 0 0 300px;
     margin: 1rem;
     height: auto;
-    background-color: var(--accent-colour);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .experience-container {
@@ -336,16 +338,15 @@ article p {
     border: 1px solid black;
 }
 
-.project-title {
-    margin: 1rem;
-    color: var(--text-color);
-}
-
 .project-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
+}
+
+.list-container .btn-container {
+    margin-top: auto;
 }
 
 /* BUTTONS */
@@ -355,25 +356,31 @@ article p {
     justify-content: center;
     gap: 1rem;
     padding-bottom: 2vh;
+    margin-top: 10px;
 }
 
 .btn{
-    font-weight: 600;
-    padding: 1rem;
-    width: 8rem;
-    border-radius: 2rem;
-    transition: var(--transition-speed) ease;
-    cursor: pointer;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    margin: 20px;
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.5s ease 0s;
+    border: none;
     background: var(--secondary-color);
-    border: rgb(195, 195, 195) 0.1rem solid;
-    color: var(--text-color);
+
 }
 
 .btn:hover{
-    background: var(--primary-color);
-    color: white;
-    border-color: white;
+    transform: scale(1.1);
+    text-decoration: underline;
 }
+
 
 /* FOOTER SECTION */
 footer p{
@@ -381,9 +388,9 @@ footer p{
 }
 
 footer a {
-    color: var(--primary-color);
+    color: var(--link-color);
 }
 
 footer a:hover {
-    color: var(--tertiary-color);
+    color: var(--primary-color);
 }

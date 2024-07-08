@@ -1,7 +1,7 @@
 /* Media query for screens with a maximum width of 1200px */
 @media screen and (max-width: 1200px) {
-    .section-text-header,
-    .section-text-paragraph {
+    .subheader-text,
+    .paragraph-text {
         font-size: 3vw;
     }
     .about-container {
@@ -19,7 +19,7 @@
         right: -100%;
         z-index: 10;
         width: 300px;
-        background-color: gray;
+        background-color: var(--sidebar-color);
         box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
         transition: 0.5s ease-out;
     }
@@ -58,14 +58,13 @@
         display: block;
     }
 
-    .title {
-        font-size: 10vw;
-        width: 80vw;
+    .subheader-text,
+    .paragraph-text{
+        font-size: 5vw;
     }
 
-    .section-text-header,
-    .section-text-paragraph {
-        font-size: 5vw;
+    .title{
+        font-size: 7vw;
     }
 
     .about-container {
@@ -87,16 +86,16 @@
         padding: 0;
     }
 
-    .list-container {
-        margin: 0 auto;
-    }
-
     .project-list .list-container {
         margin-bottom: 20px;
     }
     
     .profile-img img{
         width: 20vh
+    }
+
+    .list-container{
+        padding: 1rem;
     }
 }
 
